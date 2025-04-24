@@ -15,9 +15,7 @@ typedef struct {
 } PPI_CHANNEL_TYPE;
 
 typedef struct {
-	// Tasks
 	volatile PPI_TASKS_TYPE PPI_TASKS[4];
-	// Registers
 	volatile uint32_t RESERVED0[312];
 	volatile uint32_t CHEN;
 	volatile uint32_t CHENSET;
@@ -27,5 +25,8 @@ typedef struct {
 	volatile uint32_t RESERVED2[156];
 	volatile uint32_t CHG[4];
 } NRF_PPI_REG;
+
+
+void ppi_init(void);
 
 #endif
